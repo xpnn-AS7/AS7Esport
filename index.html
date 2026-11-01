@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="assets/svg/logo.svg">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Astre7 Esport</title>
+  </head>
+  <body>
+    <div class="container"></div>
+    <header>
+      <img src="assets/svg/logo.svg" alt="AS7 logo" />
+      <nav class="navigation">
+        <ul>
+          <li><a href="#aboutMe">AboutUS</a></li>
+          <li><a href="#OURTEAM">OurTeam</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="themeToggle" type="button" aria-pressed="false">
+        Switch to light mode
+      </button>
+    </header>
+    <hr />
+
+    <section class="hero">
+      <img class="arrow" src="assets/svg/arrow.svg" alt="arrow" />
+      <div class="heroSub">
+        <h1 class="name">ASTRE7 Esport</h1>
+        <h1 class="title">Esport Team</h1>
+        <div class="heroBtns">
+          <a class="hireMe" href="#contact">Contact Us</a>
+          <a class="cv" href="assets/astre7 2020-4-14" download
+            >Download Our TeamSpeak BackUp
+            <img src="assets/svg/download.svg" alt="download button"
+          /></a>
+        </div>
+      </div>
+      <img src="assets/svg/Hero.svg" alt="hero image" class="heroImg" />
+    </section>
+
+    <section class="aboutMe" id="aboutMe">
+      <img
+        src="assets/svg/AboutMe.svg"
+        alt="aboutMe image"
+        class="aboutMeImg"
+      />
+      <div class="textContainer">
+        <div class="textTitle">
+          <h1 class="aboutName">About</h1>
+          <h1 class="aboutTitle">US</h1>
+          <img src="assets/svg/lightbulb.svg" alt="ligh" class="light" />
+        </div>
+        <p class="aboutUSPar">
+          We are more than just a team — we are a family united by passion, dedication, and the desire to compete at the highest level.
+
+As an Esports team, we strive for excellence, constantly pushing our limits, improving our skills, and proving ourselves through teamwork, discipline, and determination.
+
+Our mission is simple: Compete. Improve. Dominate.
+
+We believe that every challenge is an opportunity, every defeat is a lesson, and every victory is a step towards greatness.
+
+One Team. One Dream. No Limits.
+        </p>
+      </div>
+    </section>
+
+    <section class="works" id="OURTEAM">
+      <div class="worksContainer">
+        <div class="projectTitle">
+          <h1 class="aboutName">OUR</h1>
+          <h1 class="aboutTitle">TEAM</h1>
+        </div>
+        <ul>
+          <li>
+            <a href=""
+              ><img src="assets/imgs/MY.png" alt="landing Page"
+            /></a>
+          </li>
+          <li>
+            <a href=""><img src="assets/imgs/M J R.png" alt="Wep App" /></a>
+          </li>
+          <li>
+            <a href=""><img src="assets/imgs/IDK.png" alt="App" /></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contactContainer" id="contact">
+      <div class="contactTitle">
+        <h1 class="aboutName">Contact</h1>
+        <h1 class="aboutTitle">US
+
+        </h1>
+      </div>
+      <div class="contact">
+        <div class="emailAndPhone">
+          <img src="assets/svg/Email.svg" alt="email logo" />
+          <a href="mailto:AS7_ESPORT@gmail.com"
+            ><h3>AS7_ESPORT@gmail.com</h3></a
+          >
+        </div>
+        <div class="emailAndPhone">
+          <img src="assets/svg/phone.svg" alt="phone logo" />
+          <h3>+9647814954447</h3>
+        </div>
+      </div>
+      <div class="socialMedia">
+        <a
+          href="https://discord.gg/KqvbVYbY3F"
+          target="_blank"
+          ><img src="assets/svg/discord.svg" alt="my linkedin account"
+        /></a>
+        <a href="https://github.com/xpnn-AS7" target="_blank"
+          ><img src="assets/svg/github.svg" alt=" my github account"
+        /></a>
+        <a href="https://x.com/xpnn_0" target="_blank"
+          ><img src="assets/svg/twitter.svg" alt="my x account"
+        /></a>
+        <a href="https://www.youtube.com/@AS7Moody" target="_blank"
+          ><img src="assets/svg/youtube.svg" alt="my youtube channel"
+        /></a>
+      </div>
+    </section>
+    <hr />
+    <footer>
+      <p>Built by MY</p>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector(".themeToggle");
+      const savedTheme = localStorage.getItem("theme");
+
+      function setTheme(theme) {
+        const isLight = theme === "light";
+        document.body.dataset.theme = theme;
+        themeToggle.textContent = isLight
+          ? "Switch to dark mode"
+          : "Switch to light mode";
+        themeToggle.setAttribute("aria-pressed", String(isLight));
+      }
+
+      setTheme(savedTheme === "light" ? "light" : "dark");
+
+      themeToggle.addEventListener("click", () => {
+        const theme =
+          document.body.dataset.theme === "dark" ? "light" : "dark";
+        setTheme(theme);
+        localStorage.setItem("theme", theme);
+      });
+    </script>
+  </body>
+</html>
